@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C2513" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RsD-Xy-IHs">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="OUb-gv-L3f">
+            <objects>
+                <tabBarController id="RsD-Xy-IHs" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="b9j-H0-hcs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="DVU-Lo-kAu" kind="relationship" relationship="viewControllers" id="EXu-da-Sim"/>
+                        <segue destination="JeJ-Vh-ekX" kind="relationship" relationship="viewControllers" id="a3A-bd-e38"/>
+                        <segue destination="g5y-c9-zlI" kind="relationship" relationship="viewControllers" id="YBY-Sg-Dw9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gjp-Ww-OJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="345"/>
+        </scene>
+        <!--课程推荐-->
+        <scene sceneID="cb7-hf-Hdu">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="DVU-Lo-kAu" customClass="XDCourceViewController" customModule="XDProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xML-3l-hcF"/>
+                        <viewControllerLayoutGuide type="bottom" id="e5t-Rb-CF9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lx1-Cu-Z97">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s51-l0-5hO">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="98"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCT-Ca-VzD">
+                                        <rect key="frame" x="10" y="20" width="60" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="82p-JW-aII"/>
+                                            <constraint firstAttribute="width" constant="60" id="rcN-Zo-PDz"/>
+                                        </constraints>
+                                        <state key="normal" title="点击这儿">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clickedBtnAboutMe:" destination="DVU-Lo-kAu" eventType="touchUpInside" id="zfx-wP-p1Y"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="百度传课" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYp-1S-So3">
+                                        <rect key="frame" x="220" y="20" width="160" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="6Nt-Lw-x50"/>
+                                            <constraint firstAttribute="width" constant="160" id="8Ri-n4-WzX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubt-Wz-oLb">
+                                        <rect key="frame" x="531" y="20" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="xcq-ww-kRd"/>
+                                            <constraint firstAttribute="width" constant="40" id="yrT-8j-eK5"/>
+                                        </constraints>
+                                        <state key="normal" image="search_btn_unpre_bg.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="searchClicked:" destination="DVU-Lo-kAu" eventType="touchUpInside" id="dC0-cr-GPG"/>
+                                        </connections>
+                                    </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="g67-9c-oUK">
+                                        <rect key="frame" x="36" y="64" width="528" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="xgk-Ms-Lif"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="精选推荐"/>
+                                            <segment title="课程分类"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.1803921568627451" green="0.61960784313725492" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="OnTapSegmentCtr:" destination="DVU-Lo-kAu" eventType="valueChanged" id="r4o-cG-k07"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2627450980392157" green="0.7803921568627451" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="iYp-1S-So3" firstAttribute="top" secondItem="s51-l0-5hO" secondAttribute="top" constant="20" id="4dx-C9-WG1"/>
+                                    <constraint firstItem="g67-9c-oUK" firstAttribute="leading" secondItem="s51-l0-5hO" secondAttribute="leading" constant="36" id="7yh-tT-6bY"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="ApZ-bH-Oc5"/>
+                                    <constraint firstItem="g67-9c-oUK" firstAttribute="top" secondItem="iYp-1S-So3" secondAttribute="bottom" constant="14" id="KSB-ma-dDR"/>
+                                    <constraint firstAttribute="centerX" secondItem="iYp-1S-So3" secondAttribute="centerX" id="Y5o-36-lMI"/>
+                                    <constraint firstItem="fCT-Ca-VzD" firstAttribute="top" secondItem="s51-l0-5hO" secondAttribute="top" constant="20" id="cQo-KE-gUC"/>
+                                    <constraint firstAttribute="height" constant="98" id="fsd-Xw-v4d"/>
+                                    <constraint firstAttribute="trailing" secondItem="g67-9c-oUK" secondAttribute="trailing" constant="36" id="gjf-hK-pfX"/>
+                                    <constraint firstItem="fCT-Ca-VzD" firstAttribute="leading" secondItem="s51-l0-5hO" secondAttribute="leading" constant="10" id="reJ-YE-djZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="ubt-Wz-oLb" secondAttribute="trailing" constant="29" id="roh-Dz-o7R"/>
+                                    <constraint firstItem="ubt-Wz-oLb" firstAttribute="top" secondItem="s51-l0-5hO" secondAttribute="top" constant="20" id="scr-2v-Rtg"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vIl-X6-Cg3">
+                                <rect key="frame" x="0.0" y="98" width="600" height="453"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="gXQ-zO-Za9"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="452" id="lYb-dr-U9k"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gXQ-zO-Za9"/>
+                                        <exclude reference="lYb-dr-U9k"/>
+                                    </mask>
+                                </variation>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vIl-X6-Cg3" firstAttribute="bottom" secondItem="e5t-Rb-CF9" secondAttribute="top" id="4zI-64-jLT"/>
+                            <constraint firstItem="s51-l0-5hO" firstAttribute="top" secondItem="lx1-Cu-Z97" secondAttribute="top" id="8kS-zj-GG5"/>
+                            <constraint firstItem="vIl-X6-Cg3" firstAttribute="leading" secondItem="s51-l0-5hO" secondAttribute="leading" id="Azb-cm-qfi"/>
+                            <constraint firstAttribute="trailing" secondItem="vIl-X6-Cg3" secondAttribute="trailing" id="Pij-Ca-Jb5"/>
+                            <constraint firstItem="e5t-Rb-CF9" firstAttribute="top" secondItem="vIl-X6-Cg3" secondAttribute="bottom" id="QFO-vq-fdY"/>
+                            <constraint firstItem="vIl-X6-Cg3" firstAttribute="trailing" secondItem="s51-l0-5hO" secondAttribute="trailing" id="RKg-hb-fCB"/>
+                            <constraint firstItem="vIl-X6-Cg3" firstAttribute="top" secondItem="s51-l0-5hO" secondAttribute="bottom" id="bTt-IL-RtT"/>
+                            <constraint firstItem="vIl-X6-Cg3" firstAttribute="leading" secondItem="lx1-Cu-Z97" secondAttribute="leading" id="dcb-RE-dXh"/>
+                            <constraint firstItem="vIl-X6-Cg3" firstAttribute="top" secondItem="s51-l0-5hO" secondAttribute="bottom" id="gbN-64-CNZ"/>
+                            <constraint firstItem="s51-l0-5hO" firstAttribute="leading" secondItem="lx1-Cu-Z97" secondAttribute="leading" id="ljb-KJ-d4X"/>
+                            <constraint firstAttribute="trailing" secondItem="s51-l0-5hO" secondAttribute="trailing" id="r8i-DC-AzJ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Pij-Ca-Jb5"/>
+                                <exclude reference="bTt-IL-RtT"/>
+                                <exclude reference="dcb-RE-dXh"/>
+                                <exclude reference="QFO-vq-fdY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="课程推荐" image="bottom_tab1_unpre.png" id="6Fm-VK-AkN"/>
+                    <connections>
+                        <outlet property="tableView" destination="vIl-X6-Cg3" id="bOg-Ej-MDl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ukr-3Z-a3p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="931" y="-216"/>
+        </scene>
+        <!--我的传课-->
+        <scene sceneID="AgE-J0-4N9">
+            <objects>
+                <viewController id="JeJ-Vh-ekX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="naG-r8-mb8"/>
+                        <viewControllerLayoutGuide type="bottom" id="tcm-Sg-PYc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rdh-co-b0k">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="我的传课" image="bottom_tab2_unpre.png" id="vkk-HN-GqJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oKR-Xq-1rC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942" y="695"/>
+        </scene>
+        <!--离线下载-->
+        <scene sceneID="dZq-3J-OJa">
+            <objects>
+                <viewController id="g5y-c9-zlI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1OK-Rv-42U"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zfg-nk-v5e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h5U-uT-lpr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="离线下载" image="bottom_tab3_unpre.png" id="GQU-mS-SPs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WRs-g9-KPn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="1164"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bottom_tab1_unpre.png" width="26" height="26"/>
+        <image name="bottom_tab2_unpre.png" width="26" height="26"/>
+        <image name="bottom_tab3_unpre.png" width="26" height="26"/>
+        <image name="search_btn_unpre_bg.png" width="65" height="65"/>
+    </resources>
+</document>
